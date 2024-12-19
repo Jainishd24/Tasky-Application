@@ -14,6 +14,10 @@
 </head>
 
 <body>
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#showTask">
+    Launch demo modal
+  </button>
+
   <!-- Btn on Small Screen Size -->
   <div class="add__new__btn__mobile__only d-md-none">
     <button class="btn btn-primary d-flex align-items-center gap-3" type="submit" data-bs-toggle="modal"
@@ -36,7 +40,7 @@
             <div class="mb-3">
               <label for="imageUrl" class="form-label">Image URL</label>
               <input type="url" class="form-control" id="imageUrl" aria-describedby="imageDesc"
-                placeholder="https://jainish.com/image.png" />
+                placeholder="https://rohan.com/image.png" />
               <div id="imageDesc" class="form-text">
                 Its a optional filed for you...
               </div>
@@ -73,12 +77,13 @@
   </div>
 
   <!-- Open Task Modal -->
-
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="showTask" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Task Details..</h1>
+          <h1 class="modal-title fs-5" id="exampleModalLabel">
+            Task Details..
+          </h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body task__modal__body"></div>
@@ -95,7 +100,7 @@
   <!-- nav bar -->
   <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">JS Build</a>
+      <a class="navbar-brand" href="#">J0123P2-Build</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
