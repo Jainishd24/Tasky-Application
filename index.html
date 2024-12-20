@@ -13,10 +13,15 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body>
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#showTask">
-    Launch demo modal
-  </button>
+<body onload="loadInitialData()">
+  <!-- <button
+      type="button"
+      class="btn btn-primary"
+      data-bs-toggle="modal"
+      data-bs-target="#showTask"
+    >
+      Launch demo modal
+    </button> -->
 
   <!-- Btn on Small Screen Size -->
   <div class="add__new__btn__mobile__only d-md-none">
@@ -35,7 +40,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <form>
+          <form onsubmit="return false">
             <!-- img -->
             <div class="mb-3">
               <label for="imageUrl" class="form-label">Image URL</label>
@@ -70,7 +75,9 @@
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
             Close
           </button>
-          <button type="submit" class="btn btn-primary">Save changes</button>
+          <button type="submit" class="btn btn-primary" onclick="handleSubmit()">
+            Save changes
+          </button>
         </div>
       </div>
     </div>
