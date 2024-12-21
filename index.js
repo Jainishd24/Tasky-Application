@@ -319,17 +319,20 @@ const saveEdit = (e) => {
   submitButton.innerHTML = "Open Task";
 };
 
-// search
 const searchTask = (e) => {
-    if (!e) e = window.event;
+  if (!e) e = window.event;
 
-  while(taskContents.firstChild){
+  while (taskContents.firstChild) {
     taskContents.removeChild(taskContents.firstChild);
   }
-  const resultData = state.taskList.filter(({title}) => {
-    title.includes(e.target.value)
-  });
+  const resultData = state.taskList.filter(({ title }) =>
+    title.toLowerCase().includes(e.target.value.toLowerCase())
+  );
 
   // console.log(resultData);
-  
-}
+  resultData.map(
+    (cardData) =>
+      taskContents.insertAdjacentHTML("beforeend", htmlTaskContent(cardData))
+    // taskContents.insertAdjacentHTML("beforeend", htmlModalContent(cardData))
+  );
+};
